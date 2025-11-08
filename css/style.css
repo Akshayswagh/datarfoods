@@ -16,10 +16,35 @@
 
 
 .back-to-top {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    z-index: 99;
+    position: fixed !important;
+    right: 20px !important;
+    left: auto !important; /* ensure it is not pinned to the left */
+    bottom: 20px !important;
+    z-index: 1100 !important; /* higher than navbar and modals */
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    transition: transform 0.15s ease, opacity 0.2s ease;
+    opacity: 0.95;
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px);
+    opacity: 1;
+}
+
+/* Respect safe-area on iOS and reduce spacing on very small screens */
+@media (max-width: 575.98px) {
+    .back-to-top {
+        right: calc(12px + env(safe-area-inset-right, 0px)) !important;
+        left: auto !important;
+        bottom: calc(12px + env(safe-area-inset-bottom, 0px)) !important;
+        width: 44px;
+        height: 44px;
+    }
 }
 
 :root {
@@ -886,15 +911,45 @@ h4, h5, h6, .h4, .h5, .h6 {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(212, 167, 98, 0.7);
+    background: rgba(212, 167, 98, 0.5);
     border-radius: 8px;
-    transition: 0.5s;
+    transition: all 0.3s ease;
     opacity: 0;
     z-index: 1;
 }
 
 .event .event-img:hover .event-overlay {
     opacity: 1;
+}
+
+.event .event-img .event-overlay .zoom-icon {
+    background: rgba(255, 255, 255, 0.9);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    transform: scale(0);
+}
+
+.event .event-img:hover .event-overlay .zoom-icon {
+    transform: scale(1);
+}
+
+.event .event-img .event-overlay .zoom-icon:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+.event .event-img .event-overlay .zoom-icon i {
+    color: var(--bs-primary);
+    transition: all 0.3s ease;
+}
+
+.event .event-img .event-overlay .zoom-icon:hover i {
+    transform: scale(1.1);
 }
 /*** Events End ***/
 
@@ -976,6 +1031,24 @@ h4, h5, h6, .h4, .h5, .h6 {
 
 .menu .menu-item .border-bottom {
     border-bottom-style: dashed !important;
+}
+/* Fixed circular thumbnails for menu items */
+.menu .menu-item img.flex-shrink-0,
+.menu .menu-item img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    border: 3px solid #fff;
+}
+
+@media (max-width: 767.98px) {
+    .menu .menu-item img.flex-shrink-0,
+    .menu .menu-item img {
+        width: 72px;
+        height: 72px;
+    }
 }
 /*** Menu End ***/
 
@@ -1188,12 +1261,55 @@ h4, h5, h6, .h4, .h5, .h6 {
 /*** testimonial Start ***/
 .testimonial-item {
     border: 1px solid var(--bs-primary);
-    padding: 20px 20px;
+    padding: 30px 25px;
+    background: #fff;
+    transition: all 0.3s ease;
+    height: 100%;
 }
 
-.testimonial-carousel .owl-item img {
-    width: 100px;
-    height: 100px;
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.testimonial-item .fa-quote-right {
+    color: var(--bs-primary);
+    opacity: 0.25;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-content {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-content .d-flex {
+    margin-bottom: 1rem;
+}
+
+.testimonial-content .fas.fa-star {
+    color: #FFD700;
+    margin-right: 4px;
+}
+
+.testimonial-content p {
+    color: #555;
+    line-height: 1.7;
+    font-style: italic;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-stage {
+    display: flex;
+    align-items: stretch;
+}
+
+.testimonial-carousel .owl-item {
+    display: flex;
+    height: auto;
 }
 
 .testimonial-carousel.owl-rtl .testimonial-item {

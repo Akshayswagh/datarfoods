@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
 
@@ -65,12 +65,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
-              <a href="index.html" class="nav-item nav-link active">Home</a>
-              <a href="about.html" class="nav-item nav-link">About</a>
-              
-              <a href="menu.html" class="nav-item nav-link">Menu</a>
-            
-              <a href="contact.html" class="nav-item nav-link">Contact</a>
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="index.html#about" class="nav-item nav-link">About</a>
+              <a href="index.html#menu" class="nav-item nav-link">Menu</a>
+              <a href="index.html#testimonial" class="nav-item nav-link">Testimonials</a>
+              <a href="contact.html" class="nav-item nav-link active">Contact</a>
             </div>
 
             <a
@@ -124,91 +123,322 @@
     <!-- Modal Search End -->
 
     <!-- Hero Start -->
-    <div class="container-fluid bg-light py-6 my-6 mt-0">
-      <div class="container text-center animated bounceInDown">
-        <h1 class="display-1 mb-4">Contact</h1>
-        <ol
-          class="breadcrumb justify-content-center mb-0 animated bounceInDown"
-        >
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Pages</a></li>
-          <li class="breadcrumb-item text-dark" aria-current="page">Contact</li>
-        </ol>
+    <div class="container-fluid hero-header position-relative py-6 my-6 mt-0">
+      <div class="hero-pattern"></div>
+      <div class="container position-relative">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+              <!-- Decorative elements -->
+              <div class="wow fadeInUp" data-wow-delay="0.1s">
+                <i class="fas fa-utensils text-primary display-1 mb-4"></i>
+              </div>
+            
+              <!-- Main heading with enhanced typography -->
+              <h1 class="display-1 text-white mb-4 animated bounceInDown">
+                Let's Connect
+              </h1>
+            
+              <!-- Elegant subheading -->
+              <p class="fs-4 text-white mb-4 wow fadeInUp" data-wow-delay="0.3s">
+                We're here to make your culinary dreams come true
+              </p>
+            
+              <!-- Enhanced breadcrumb with hover effects -->
+              <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-delay="0.5s">
+                <ol class="breadcrumb justify-content-center mb-0">
+                  <li class="breadcrumb-item">
+                    <a href="index.html" class="text-white">Home</a>
+                  </li>
+                  <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+                </ol>
+              </nav>
+            
+              <!-- Decorative separator -->
+              <div class="wow fadeInUp" data-wow-delay="0.7s">
+                <div class="d-inline-block border-top border-primary border-2 pt-3 px-4 mt-4">
+                  <h5 class="text-white mb-0">Reach out to us today</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Floating decorative elements -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style="z-index: 1;">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 position-relative">
+                <i class="fas fa-pepper-hot text-primary position-absolute" style="top: 20%; left: 10%; font-size: 3rem; opacity: 0.5; animation: float 6s ease-in-out infinite;"></i>
+                <i class="fas fa-carrot text-primary position-absolute" style="top: 60%; right: 15%; font-size: 2.5rem; opacity: 0.5; animation: float 8s ease-in-out infinite;"></i>
+                <i class="fas fa-leaf text-primary position-absolute" style="bottom: 20%; left: 20%; font-size: 2rem; opacity: 0.5; animation: float 7s ease-in-out infinite;"></i>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
-    <!-- Hero End -->
+      <!-- Hero End -->
+    
+      <!-- Add floating animation keyframes to existing styles -->
+    <style>
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      .hero-header {
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(135deg, var(--bs-primary), #0f172b);
+        color: white;
+      }
 
-    <!-- Contact Start -->
-    <div
-      class="container-fluid contact py-6 wow bounceInUp"
-      data-wow-delay="0.1s"
-    >
+      .hero-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        opacity: 0.15;
+        background-image: 
+          radial-gradient(var(--bs-primary) 2px, transparent 2px),
+          radial-gradient(#fff 1.5px, transparent 1.5px);
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+        animation: patternMove 20s linear infinite;
+      }
+
+      .hero-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+          linear-gradient(45deg, rgba(0,0,0,0.2) 25%, transparent 25%) -50px 0,
+          linear-gradient(-45deg, rgba(0,0,0,0.2) 25%, transparent 25%) -50px 0,
+          linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.2) 75%),
+          linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.2) 75%);
+        background-size: 100px 100px;
+        animation: gradientMove 20s linear infinite;
+      }
+
+      @keyframes patternMove {
+        0% {
+          background-position: 0 0, 25px 25px;
+        }
+        100% {
+          background-position: 50px 0, 75px 25px;
+        }
+      }
+
+      @keyframes gradientMove {
+        0% {
+          background-position: 0 0, 0 0, 0 0, 0 0;
+        }
+        100% {
+          background-position: 100px 0, 100px 0, 0 0, 0 0;
+        }
+      }
+
+      .hero-header .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-header h1 {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        color: #fff;
+        position: relative;
+        font-weight: 600;
+      }
+
+      .hero-header h1::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 2px;
+        background: var(--bs-primary);
+        box-shadow: 0 0 15px var(--bs-primary);
+      }
+
+      .hero-header .breadcrumb-item + .breadcrumb-item::before {
+        color: rgba(255,255,255,0.7);
+      }
+      
+      .hero-header .breadcrumb-item a {
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+      }
+
+      .hero-header .breadcrumb-item a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #fff;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .hero-header .breadcrumb-item a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .hero-header .fs-4 {
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      }
+
+      /* Add geometric shapes in the background */
+      .hero-header::after {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border: 2px solid var(--bs-primary);
+        border-radius: 50%;
+        top: -100px;
+        right: -100px;
+        opacity: 0.2;
+        animation: rotate 30s linear infinite;
+      }
+
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>    <!-- Contact Start -->
+    <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
       <div class="container">
         <div class="p-5 bg-light rounded contact-form">
           <div class="row g-4">
             <div class="col-12">
-              <small
-                class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3"
-                >Get in touch</small
-              >
-              <h1 class="display-5 mb-0">Contact Us For Any Queries!</h1>
+              <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">
+                Get in touch
+              </small>
+              <h1 class="display-5 mb-4">Contact Us For Any Queries!</h1>
+              <p class="lead mb-5">
+                We'd love to hear from you! Whether you're planning an event, have questions about our catering services, or want to discuss a special order, our team is here to assist you.
+              </p>
             </div>
-            <div class="col-md-6 col-lg-7">
-             
-              <form>
-                <input
-                  type="text"
-                  class="w-100 form-control p-3 mb-4 border-primary bg-light"
-                  placeholder="Your Name"
-                />
-                <input
-                  type="email"
-                  class="w-100 form-control p-3 mb-4 border-primary bg-light"
-                  placeholder="Enter Your Email"
-                />
-                <textarea
-                  class="w-100 form-control mb-4 p-3 border-primary bg-light"
-                  rows="4"
-                  cols="10"
-                  placeholder="Your Message"
-                ></textarea>
-                <button
-                  class="w-100 btn btn-primary form-control p-3 border-primary bg-primary rounded-pill"
-                  type="submit"
-                >
-                  Submit Now
-                </button>
-              </form>
+
+            <!-- Contact Form -->
+            <div class="col-lg-6 col-xl-7">
+              <div class="bg-white p-4 p-lg-5 rounded shadow-sm">
+                <h4 class="mb-4">Send us a message</h4>
+                <form>
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <input type="text" class="form-control border-primary py-3" placeholder="Your Name" />
+                    </div>
+                    <div class="col-md-6">
+                      <input type="email" class="form-control border-primary py-3" placeholder="Your Email" />
+                    </div>
+                    <div class="col-12">
+                      <input type="text" class="form-control border-primary py-3" placeholder="Subject" />
+                    </div>
+                    <div class="col-12">
+                      <textarea class="form-control border-primary py-3" rows="6" placeholder="Your Message"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary w-100 py-3 px-5 rounded-pill" type="submit">
+                        Send Message
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="col-md-6 col-lg-5">
-              <div>
-                <div
-                  class="d-inline-flex w-100 border border-primary p-4 rounded mb-4"
-                >
-                  <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
-                  <div class="">
-                    <h4>Address</h4>
-                    <p>123 Street, New York, USA</p>
+
+            <!-- Contact Info -->
+            <div class="col-lg-6 col-xl-5">
+              <!-- Working Hours Card -->
+              <div class="bg-primary rounded p-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-clock fa-3x text-white"></i>
+                  <div class="ms-4">
+                    <h4 class="text-white mb-1">Working Hours</h4>
+                    <p class="text-white-50 mb-0">Open 7 days a week</p>
                   </div>
                 </div>
-                <div
-                  class="d-inline-flex w-100 border border-primary p-4 rounded mb-4"
-                >
-                  <i class="fas fa-envelope fa-2x text-primary me-4"></i>
-                  <div class="">
-                    <h4>Mail Us</h4>
-                    <p class="mb-2">info@example.com</p>
-                    <p class="mb-0">support@example.com</p>
-                  </div>
+                <div class="border border-white border-2 rounded p-3">
+                  <p class="text-white mb-2 h5">
+                    <span class="fw-normal">Monday - Sunday:</span>
+                    <br>
+                    <span class="fw-bold">9:00 AM - 9:00 PM</span>
+                  </p>
+                  <p class="text-white-50 mb-0">
+                    *Hours may vary during holidays and special events
+                  </p>
                 </div>
-                <div
-                  class="d-inline-flex w-100 border border-primary p-4 rounded"
-                >
-                  <i class="fa fa-phone-alt fa-2x text-primary me-4"></i>
-                  <div class="">
-                    <h4>Telephone</h4>
-                    <p class="mb-2">(+012) 3456 7890 123</p>
-                    <p class="mb-0">(+704) 5555 0127 296</p>
+              </div>
+
+              <!-- Contact Info Cards -->
+              <div class="bg-white rounded p-4 p-lg-5 shadow-sm wow fadeInUp" data-wow-delay="0.3s">
+                <div class="row g-4">
+                  <!-- Address -->
+                  <div class="col-12">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
+                      <div>
+                        <h5 class="mb-2">Visit Our Location</h5>
+                        <p class="mb-0">
+                          Vithal Smruti, Ground Floor Flat 2,<br>
+                          Hotel Kokan Express Lane,<br>
+                          Kothrud Stand, Pune
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Phone Numbers -->
+                  <div class="col-12">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-phone-alt fa-2x text-primary me-4"></i>
+                      <div>
+                        <h5 class="mb-2">Call Us</h5>
+                        <p class="mb-1"><a href="tel:+919975498992" class="text-body">+91 9975498992</a></p>
+                        <p class="mb-0"><a href="tel:+919404963383" class="text-body">+91 9404963383</a></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-12">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-envelope fa-2x text-primary me-4"></i>
+                      <div>
+                        <h5 class="mb-2">Email Us</h5>
+                        <p class="mb-0">
+                          <a href="mailto:datarfoods17@gmail.com" class="text-body">
+                            datarfoods17@gmail.com
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WhatsApp -->
+                  <div class="col-12">
+                    <div class="d-flex align-items-center">
+                      <i class="fab fa-whatsapp fa-2x text-primary me-4"></i>
+                      <div>
+                        <h5 class="mb-2">WhatsApp</h5>
+                        <p class="mb-0">
+                          <a href="https://wa.me/919975498992" target="_blank" class="text-body">
+                            Click to chat on WhatsApp
+                          </a>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -219,125 +449,126 @@
     </div>
     <!-- Contact End -->
 
-    <!-- Footer Start -->
-    <div
-      class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp"
-      data-wow-delay="0.1s"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-item">
-              <h1 class="text-primary">
-                Datar<span class="text-dark">Foods</span>
-              </h1>
-              <p class="lh-lg mb-4">
-                  At Datar Foods, we're passionate about serving up authentic
-                Maharashtrian cuisine.
-              </p>
-              <div class="footer-icon d-flex">
-                <a
-                  class="btn btn-primary btn-sm-square me-2 rounded-circle"
-                  href=""
-                  ><i class="fab fa-instagram"></i
-                ></a>
+    <!-- Map Start -->
+    <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container mb-5">
+        <div class="bg-white">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.6633319454574!2d73.81664077501657!3d18.49943658256149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf89938fe551%3A0xed7869b54e3daa7f!2sKothrud%20Bus%20Depot!5e0!3m2!1sen!2sin!4v1699445700840!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- Map End -->
 
-                <a
-                  href="#"
-                  class="btn btn-primary btn-sm-square me-2 rounded-circle"
-                  ><i class="fab fa-youtube"></i
-                ></a>
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 bg-dark">
+      <div class="container py-3">
+        <div class="row g-5">
+          <!-- About Column -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-item">
+              <h1 class="text-primary mb-4">
+                Datar<span class="text-light">Foods</span>
+              </h1>
+              <p class="text-light mb-4">
+                Experience the authentic taste of Maharashtra. From traditional thalis to festival 
+                specialties, we bring the rich flavors of our culture to your celebrations.
+              </p>
+              <div class="d-flex pt-3">
+                <a class="btn btn-primary rounded-circle me-3 d-flex align-items-center justify-content-center p-0" 
+                   style="width: 42px; height: 42px; min-width: 42px; min-height: 42px; border-radius: 50% !important;" href="">
+                  <i class="fab fa-instagram fs-5"></i>
+                </a>
+                <a class="btn btn-primary rounded-circle me-3 d-flex align-items-center justify-content-center p-0" 
+                   style="width: 42px; height: 42px; min-width: 42px; min-height: 42px; border-radius: 50% !important;"
+                   href="https://www.youtube.com/@datarfood3426">
+                  <i class="fab fa-youtube fs-5"></i>
+                </a>
+                <a class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center p-0" 
+                   style="width: 42px; height: 42px; min-width: 42px; min-height: 42px; border-radius: 50% !important;"
+                   href="https://wa.me/919975498992">
+                  <i class="fab fa-whatsapp fs-5"></i>
+                </a>
               </div>
             </div>
           </div>
+
+          <!-- Quick Links Column -->
           <div class="col-lg-3 col-md-6">
             <div class="footer-item">
-              <h4 class="mb-4">Special Facilities</h4>
-              <div class="d-flex flex-column align-items-start">
-                <a class="text-body mb-3" href=""
-                  ><i class="fa fa-check text-primary me-2"></i>Cheese Burger</a
-                >
-                <a class="text-body mb-3" href=""
-                  ><i class="fa fa-check text-primary me-2"></i>Sandwich</a
-                >
-                <a class="text-body mb-3" href=""
-                  ><i class="fa fa-check text-primary me-2"></i>Panner Burger</a
-                >
-                <a class="text-body mb-3" href=""
-                  ><i class="fa fa-check text-primary me-2"></i>Special
-                  Sweets</a
-                >
+              <h4 class="text-light mb-4">Quick Links</h4>
+              <div class="d-flex flex-column">
+                <a class="text-light mb-2" href="index.html#about">
+                  <i class="fa fa-angle-right text-primary me-2"></i>About Us
+                </a>
+                <a class="text-light mb-2" href="index.html#menu">
+                  <i class="fa fa-angle-right text-primary me-2"></i>Our Menu
+                </a>
+                <a class="text-light mb-2" href="contact.html">
+                  <i class="fa fa-angle-right text-primary me-2"></i>Contact Us
+                </a>
+                <a class="text-light mb-2" href="index.html#testimonial">
+                  <i class="fa fa-angle-right text-primary me-2"></i>Testimonials
+                </a>
               </div>
             </div>
           </div>
+
+          <!-- Services Column -->
           <div class="col-lg-3 col-md-6">
             <div class="footer-item">
-              <h4 class="mb-4">Contact Us</h4>
-              <div class="d-flex flex-column align-items-start">
-                <p>
-                  <i class="fa fa-map-marker-alt text-primary me-2"></i> 123
-                  Street, New York, USA
-                </p>
-                <p>
-                  <i class="fa fa-phone-alt text-primary me-2"></i> (+012) 3456
-                  7890 123
-                </p>
-                <p>
-                  <i class="fas fa-envelope text-primary me-2"></i>
-                  info@example.com
-                </p>
-                <p>
-                  <i class="fa fa-clock text-primary me-2"></i> 26/7 Hours
-                  Service
-                </p>
+              <h4 class="text-light mb-4">Our Services</h4>
+              <div class="d-flex flex-column">
+                <a class="text-light mb-2" href="">
+                  <i class="fas fa-utensils text-primary me-2"></i>Wedding Catering
+                </a>
+                <a class="text-light mb-2" href="">
+                  <i class="fas fa-building text-primary me-2"></i>Corporate Events
+                </a>
+                <a class="text-light mb-2" href="">
+                  <i class="fas fa-truck text-primary me-2"></i>Home Delivery
+                </a>
+                <a class="text-light mb-2" href="">
+                  <i class="fas fa-gift text-primary me-2"></i>Festival Orders
+                </a>
               </div>
             </div>
           </div>
+
+          <!-- Contact Column -->
           <div class="col-lg-3 col-md-6">
             <div class="footer-item">
-              <h4 class="mb-4">Social Gallery</h4>
-              <div class="row g-2">
-                <div class="col-4">
-                  <img
-                    src="img/menu-01.jpg"
-                    class="img-fluid rounded-circle border border-primary p-2"
-                    alt=""
-                  />
+              <h4 class="text-light mb-4">Contact Us</h4>
+              <div class="text-light">
+                <div class="d-flex mb-3">
+                  <i class="fa fa-map-marker-alt text-primary me-3 mt-1"></i>
+                  <div>
+                    Vithal Smruti, Ground Floor Flat 2,<br>
+                    Hotel Kokan Express Lane,<br>
+                    Kothrud Stand, Pune
+                  </div>
                 </div>
-                <div class="col-4">
-                  <img
-                    src="img/menu-02.jpg"
-                    class="img-fluid rounded-circle border border-primary p-2"
-                    alt=""
-                  />
+                <div class="d-flex mb-3">
+                  <i class="fa fa-phone-alt text-primary me-3 mt-1"></i>
+                  <div>
+                    +91 9975498992<br>
+                    +91 9404963383
+                  </div>
                 </div>
-                <div class="col-4">
-                  <img
-                    src="img/menu-03.jpg"
-                    class="img-fluid rounded-circle border border-primary p-2"
-                    alt=""
-                  />
+                <div class="d-flex mb-3">
+                  <i class="fa fa-envelope text-primary me-3 mt-1"></i>
+                  <div>datarfoods17@gmail.com</div>
                 </div>
-                <div class="col-4">
-                  <img
-                    src="img/menu-04.jpg"
-                    class="img-fluid rounded-circle border border-primary p-2"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    src="img/menu-05.jpg"
-                    class="img-fluid rounded-circle border border-primary p-2"
-                    alt=""
-                  />
-                </div>
-                <div class="col-4">
-                  <img
-                    src="img/menu-06.jpg"
-                    class="img-fluid rounded-circle border border-primary p-2"
-                    alt=""
-                  />
+                <div class="d-flex">
+                  <i class="fa fa-clock text-primary me-3 mt-1"></i>
+                  <div>Mon - Sun : 9:00 AM - 9:00 PM</div>
                 </div>
               </div>
             </div>
@@ -348,21 +579,24 @@
     <!-- Footer End -->
 
     <!-- Copyright Start -->
-    <div class="container-fluid copyright bg-dark py-4">
+    <div class="container-fluid copyright py-4" style="background: #0f172b;">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <span class="text-light"
-              ><a href="/"
-                ><i class="fas fa-copyright text-light me-2"></i> Datar Foods</a
-              >, All right reserved.</span
-            >
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-md-0">
+            <span class="text-light">
+              <a href="/">
+                <i class="fas fa-copyright text-primary me-2"></i>
+                <span class="text-primary">Datar</span><span class="text-light">Foods</span>
+              </a>
+              <span class="mx-2">|</span>
+              All rights reserved 2023
+            </span>
           </div>
-          <div class="col-md-6 my-auto text-center text-md-end text-white">
-            Designed By
-            <a class="border-bottom" href="https://gptsoftware.in/"
-              >GPT Software</a
-            >
+          <div class="col-md-6 text-center text-md-end">
+            <div class="text-white">
+              Crafted with <i class="fas fa-heart text-primary mx-1"></i> by
+              <a class="text-primary" href="https://gptsoftware.in/">GPT Software</a>
+            </div>
           </div>
         </div>
       </div>
